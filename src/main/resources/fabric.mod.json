@@ -3,13 +3,13 @@
 	"id": "crescendo-spells-fix",
 	"version": "${version}",
 	"name": "Crescendo Spells Fix",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Fixes Spell Engine on-shot spells not triggering with Zenith's Crescendo of Bolts",
 	"authors": [
 		"Stalemated"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": "https://github.com/Stalemated/crescendo-spells-fix"
 	},
 	"license": "MIT",
 	"icon": "assets/crescendo-spells-fix/icon.png",
