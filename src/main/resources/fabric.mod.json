@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "crescendo-spells-fix",
+	"version": "${version}",
+	"name": "Crescendo Spells Fix",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Stalemated"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/crescendo-spells-fix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.stalemated.crescendospellsfix.CrescendoSpellsFix"
+		]
+	},
+	"mixins": [
+		"crescendo-spells-fix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
