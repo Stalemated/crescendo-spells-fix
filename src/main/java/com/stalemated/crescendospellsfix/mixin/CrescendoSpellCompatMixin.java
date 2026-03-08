@@ -13,8 +13,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.stalemated.crescendospellsfix.CrescendoSpellsFix.LOGGER;
-
 @Mixin(value = CrossbowItem.class, priority = 2000)
 public class CrescendoSpellCompatMixin {
 
@@ -28,7 +26,6 @@ public class CrescendoSpellCompatMixin {
 		// If the item contains the tag, capture the spell and store it
 		if (stack.hasNbt() && stack.getNbt() != null && stack.getNbt().contains("se_spell")) {
 			attached_spell.set(stack.getNbt().getString("se_spell"));
-			LOGGER.info("Captured spell before use: {}", attached_spell.get());
 		} else {
 			attached_spell.remove();
 		}
@@ -45,9 +42,6 @@ public class CrescendoSpellCompatMixin {
 			// If Zenith's tag is still active, restore the spell
 			if (nbt.contains("shots")) {
 				nbt.putString("se_spell", spell);
-				LOGGER.info("Restored spell {} due to Crescendo active. NBT: {}", spell, nbt);
-			} else {
-				LOGGER.info("No shots tag found. Letting spell clear naturally.");
 			}
 		}
 
